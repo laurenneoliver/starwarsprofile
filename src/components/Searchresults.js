@@ -4,6 +4,7 @@ import "../styles/Searchresults.css";
 function Searchresults({ character, error }){ {/*props from App.js*/ }
     return(
         <div className="search-results">
+            <div>Search Results</div>
             {error && <p className="error-message">{error}</p>} {/*displays any errors*/}
 
             {character && (
@@ -12,6 +13,8 @@ function Searchresults({ character, error }){ {/*props from App.js*/ }
                     <p>Height: {character.height} cm</p>
                     <p>Mass: {character.mass} kg</p>
                     <p>Birth Year: {character.birth_year}</p>
+                    <p>Hair Color: {character.hair_color}</p>
+                    <p>Species: {character.species}</p>
                 </div>
             )}
         </div>
