@@ -7,7 +7,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.7.9",
+    "axios": "^1.5.0",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "react": "^19.0.0",
@@ -18,9 +18,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
+    "test:backend": "NODE_ENV=test jest --testPathPattern=server.test.js",
+    "test:frontend": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "nodemon gateway.js"
+    "dev": "nodemon server.js"
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +43,9 @@
     ]
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "@jest/globals": "^29.7.0",
+    "jest": "^27.5.1",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.0.0"
   }
 }
