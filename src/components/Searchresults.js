@@ -14,7 +14,7 @@ function Searchresults({ character, error }){ {/*props from App.js*/ }
                     <p>Mass: {character.mass} kg</p>
                     <p>Birth Year: {character.birth_year}</p>
                     <p>Hair Color: {character.hair_color}</p>
-                    <p>Species: {character.species}</p>
+                    <p>Species: {character.species_name || "Unknown"}</p>
                 </div>
             )}
         </div>

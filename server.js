@@ -25,7 +25,21 @@ app.get('/api/people', async (req, res) => {
             return res.status(404).json({ message: `${search} was not found` }); // error handling if no matching character
         }
 
-        res.json(response.data.results[0]); // Returns the first result as JSON
+        let character = response.data.results[0];
+
+        // Fetch Species Name
+        if (character.species.length > 0) { 
+            try {
+                const speciesResponse = await axios.get(character.species[0]);
+                character.species_name = speciesResponse.data.name; // Add species name
+            } catch (error) {
+                character.species_name = "Unknown"; // Fallback if API call fails
+            }
+        } else {
+            character.species_name = "Human"; // Default for empty species
+        }
+
+        res.json(character); // Returns the first result as JSON
     } catch (error){
         console.error("API Error:", error.message); //Logs error
         res.status(500).json({ error: error.message}); // error handling 
@@ -37,6 +51,5 @@ if (process.env.NODE_ENV !== "test") { // starts server when not in testing
         console.log(`Gateway API is running on http://localhost:${PORT}`)
     });
 }
-console.log("Axios Loaded Version:", require("axios").VERSION); // ✅ Log Axios version
 
 module.exports = app; // Export app for Jest
