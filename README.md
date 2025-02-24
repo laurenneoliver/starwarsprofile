@@ -37,7 +37,8 @@ This React-based web app allows users to **search for Star Wars characters** usi
 - **Backend:** Node.js, Express.js  
 - **Testing:** Jest, Supertest  
 - **API Used:** [SWAPI (Star Wars API)](https://swapi.dev/)  
-- **Styling:** CSS  
+- **Styling:** CSS
+- **Dev:** Git and GitHub
 
 ---
 
@@ -70,9 +71,12 @@ npm run dev  # Starts Express.js API on http://localhost:3000
 4️⃣ Run the React Frontend
 npm start  # Starts React App on http://localhost:3000
 ✅ Running Tests
+npm run test # run front and back end testing
+npm run test:frontend # Runs Jest test for frontend rendering
 npm run test:backend  # Runs Jest tests for backend API
 🎨 Screenshots
 🚀 Coming soon!
 
 🔮 Future Enhancements
 🎥 Fetch & display character images (e.g., using an external Star Wars API).
+🧪 More testing 
