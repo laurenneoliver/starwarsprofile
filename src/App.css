@@ -17,3 +17,7 @@ html {
     width: 40%;
     min-width: 200px;
 }
+h1 {
+    color: #ffcc01;
+    text-align: center;
+}

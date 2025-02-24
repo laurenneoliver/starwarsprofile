@@ -1,0 +1,60 @@
+/* Center the quiz */
+.quiz-container {
+    max-width: 600px;
+    margin: 200px 0px auto;
+    padding: 20px;
+    background-color: #1c1c1c; /* Dark Star Wars theme */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+/* Question text */
+.question {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Buttons for quiz answers */
+button {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin: 5px auto;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #ffaa00;
+    transform: scale(1.05);
+}
+button:active {
+    background-color: #0056b3;
+}
+
+/* Submit button */
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Character result display */
+h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffcc00;
+}

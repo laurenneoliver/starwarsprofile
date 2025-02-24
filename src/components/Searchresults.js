@@ -4,7 +4,7 @@ import "../styles/Searchresults.css";
 function Searchresults({ character, error }){ {/*props from App.js*/ }
     return(
         <div className="search-results">
-            <div>Search Results</div>
+            <div>Results</div>
             {error && <p className="error-message">{error}</p>} {/*displays any errors*/}
 
             {character && (
