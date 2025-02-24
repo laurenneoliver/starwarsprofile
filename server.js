@@ -38,6 +38,25 @@ app.get('/api/people', async (req, res) => {
         } else {
             character.species_name = "Human"; // Default for empty species
         }
+        // Fetch Films Names
+        if (character.films.length > 0) {
+            try {
+                const filmsResponses = await Promise.all(character.films.map(url => axios.get(url)));
+                character.films = filmsResponses.map(film => film.data.title); // Extract film titles
+            } catch (error) {
+                character.films = ["Unknown"]; // Fallback if API call fails
+            }
+        }
+
+        // Fetch Starships Names
+        if (character.starships.length > 0) {
+            try {
+                const starshipsResponses = await Promise.all(character.starships.map(url => axios.get(url)));
+                character.starships = starshipsResponses.map(starship => starship.data.name); // Extract starship names
+            } catch (error) {
+                character.starships = ["Unknown"]; // Fallback if API call fails
+            }
+        }
 
         res.json(character); // Returns the first result as JSON
     } catch (error){

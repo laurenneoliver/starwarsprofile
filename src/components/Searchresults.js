@@ -15,6 +15,23 @@ function Searchresults({ character, error }){ {/*props from App.js*/ }
                     <p>Birth Year: {character.birth_year}</p>
                     <p>Hair Color: {character.hair_color}</p>
                     <p>Species: {character.species_name || "Unknown"}</p>
+                    <h4>Films Appeared In:</h4>
+                    <ul>
+                        {character.films.length > 0 ? (
+                            character.films.map((film, index) => <li key={index}>{film}</li>)
+                        ) : (
+                            <li>None</li>
+                        )}
+                    </ul>
+
+                    <h4>Starships Flown:</h4>
+                    <ul>
+                        {character.starships.length > 0 ? (
+                            character.starships.map((starship, index) => <li key={index}>{starship}</li>)
+                        ) : (
+                            <li>None</li>
+                        )}
+                    </ul>
                 </div>
             )}
         </div>
