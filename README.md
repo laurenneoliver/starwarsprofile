@@ -63,16 +63,20 @@ starwarsprofile/
 ```
 ## 🚀 Installation & Setup
 1️⃣ Clone the Repository
+
 git clone https://github.com/laurenneoliver/starwarsprofile.git
 cd starwarsprofile
 
 2️⃣ Install Dependencies
+
 npm install
 
 3️⃣ Run the Backend API
+
 npm run dev  # Starts Express.js API on http://localhost:3000
 
 4️⃣ Run the React Frontend
+
 npm start  # Starts React App on http://localhost:3000
 
 ✅ Running Tests
