@@ -60,7 +60,7 @@ starwarsprofile/
 │   ├── server.test.js     # Jest tests for backend API
 │── package.json           # Dependencies & scripts
 │── README.md              # Documentation
-
+```
 ## 🚀 Installation & Setup
 1️⃣ Clone the Repository
 git clone https://github.com/laurenneoliver/starwarsprofile.git
