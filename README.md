@@ -65,6 +65,7 @@ starwarsprofile/
 1️⃣ Clone the Repository
 
 git clone https://github.com/laurenneoliver/starwarsprofile.git
+
 cd starwarsprofile
 
 2️⃣ Install Dependencies
